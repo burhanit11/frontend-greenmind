@@ -11,18 +11,18 @@ import { API_BASE_URL } from "../../utils/constran";
 
 const data = [
   {
-    id: 1,
+    _id: 1,
     title: "Natural Plants",
     img: frame7,
-    price: "130$",
+    price: 35,
   },
-  { id: 2, title: "Natural Plants", img: frame8, price: 20 },
-  { id: 3, title: "Natural Plants", img: frame9, price: 50 },
-  { id: 4, title: "Natural Plants", img: frame7, price: 60 },
-  { id: 5, title: "Natural Plants", img: frame8, price: 100 },
-  { id: 6, title: "Natural Plants", img: frame9, price: 10 },
-  { id: 7, title: "Natural Plants", img: frame7, price: 5 },
-  { id: 8, title: "Natural Plants", img: frame8, price: 15 },
+  { _id: 2, title: "Natural Plants", img: frame8, price: 20 },
+  { _id: 3, title: "Natural Plants", img: frame9, price: 50 },
+  { _id: 4, title: "Natural Plants", img: frame7, price: 60 },
+  { _id: 5, title: "Natural Plants", img: frame8, price: 100 },
+  { _id: 6, title: "Natural Plants", img: frame9, price: 10 },
+  { _id: 7, title: "Natural Plants", img: frame7, price: 5 },
+  { _id: 8, title: "Natural Plants", img: frame8, price: 15 },
 ];
 const AllProducts = () => {
   // const products = useSelector((state) => state.products);
@@ -64,7 +64,7 @@ const AllProducts = () => {
       <div className="max-w-6xl mx-auto py-10 grid md:grid-cols-4  grid-cols-1 gap-8 pt-20">
         {data.map((item) => (
           <div
-            key={item.id}
+            key={item._id}
             className="flex flex-col md:justify-start justify-center "
           >
             <img src={item.img} alt="" />
@@ -82,7 +82,7 @@ const AllProducts = () => {
                   {/* <FaArrowRightLong className="mx-2" /> */}
                 </button>
                 <button
-                  onClick={() => handleRemoveToCart(item.id)}
+                  onClick={() => handleRemoveToCart(item._id)}
                   className="bg-primary hover:bg-primary/80 flex justify-center items-center text-black p-2 rounded-md text-md"
                 >
                   remove to card
